@@ -1,0 +1,100 @@
+body * {
+  box-sizing: border-box;
+}
+
+#chess {
+  margin: 25px;
+  width: 720px;
+  height: 800px;
+  background: url("chess.jpg") no-repeat center;
+  background-size: 678px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.notice {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.row {}
+
+.row>div {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  line-height: 68px;
+  /*background: #eee;*/
+  border: 2px solid transparent;
+  text-align: center;
+  float: left;
+}
+
+.red,
+.black {
+  background: #fff;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.red::before,
+.black::before {
+  position: absolute;
+  content: '';
+  top: 4px;
+  left: 4px;
+  width: 62px;
+  height: 62px;
+  border: 1px solid transparent;
+  border-radius: 40px;
+}
+
+.red::before {
+  border-color: red;
+}
+
+.black::before {
+  border-color: black;
+}
+
+.red {
+  color: red;
+  border: 2px solid red;
+}
+
+.black {
+  color: black;
+  border: 2px solid black;
+}
+
+.row .border {
+  border-color: green;
+}
+
+.row>div:hover {
+  /*border-color: blue;*/
+}
+
+.row .move {
+  border-color: blue;
+}
+
+.row .kill {
+  border-color: yellow;
+}
